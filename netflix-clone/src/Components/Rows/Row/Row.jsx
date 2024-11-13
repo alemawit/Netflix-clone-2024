@@ -21,28 +21,28 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
       }
     })();
   }, [fetchUrl]);
-   const handleClick = (movie) => {
-     if (trailerUrl) {
-       setTrailerUrl("");
-     } else {
-       movieTrailer(movie?.title || movie?.name || movie?.original_name).then(
-         (url) => {
-           console.log(url);
-           const urlParams = new URLSearchParams(new URL(url).search);
-           console.log(urlParams);
-           console.log(urlParams.get("v"));
-           setTrailerUrl(urlParams.get("v"));
-         }
-       );
-     }
-   };
-   const opts = {
-     height: "390",
-     width: "100%",
-     playerVars: {
-       autoplay: 1,
-     },
-   };
+    const handleClick = (movie) => {
+      if (trailerUrl) {
+        setTrailerUrl("");
+      } else {
+        movieTrailer(movie?.title || movie?.name || movie?.original_name).then(
+          (url) => {
+            console.log(url);
+            const urlParams = new URLSearchParams(new URL(url).search);
+            console.log(urlParams);
+            console.log(urlParams.get("v"));
+            setTrailerUrl(urlParams.get("v"));
+          }
+        );
+      }
+    };
+    const opts = {
+      height: "390",
+      width: "100%",
+      playerVars: {
+        autoplay: 1,
+      },
+    };
   return (
     <div className="row">
       <h1>{title}</h1>
@@ -59,7 +59,7 @@ const Row = ({ title, fetchUrl, isLargeRow }) => {
           />
         ))}
       </div>
-      <div style={{ padding: "40px" }}>
+      <div style={{ padding: "20px" }}>
         {trailerUrl && <YouTube videoId={trailerUrl} opts={opts} />}
       </div>
     </div>

@@ -45,3 +45,27 @@
     font-size: 12px;
     margin-bottom:10px;
 }
+@media (max-width: 768px) {
+  .footer_inner_container {
+    display: block;
+    width: 100%; /* Full width for mobile */
+    padding: 0 10px; /* Add padding to the sides */
+  }
+  
+  .footer_icons {
+    width: 100%; /* Full width for mobile */
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .footer_data ul {
+    flex-direction: row; /* Show links in a row on mobile */
+    justify-content: space-around;
+    height: auto;
+  }
+  
+  .service_code, .copy-write {
+    text-align: center;
+    width: 100%; /* Center-align and full width */
+  }
+}
