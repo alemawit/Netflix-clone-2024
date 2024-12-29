@@ -58,10 +58,32 @@
     margin-bottom: 15px;
   }
 
-  .footer_data ul {
+  
+  .footer_inner_container{
+    flex-direction: column;
+    align-items: left;
+  }
+  .footer_data {
     flex-direction: column !important; /* Show links in a row on mobile */
     justify-content: space-around;
+    align-items: left;
+    padding-left: 15px;
+    
     height: auto;
+  }
+  .footer_data ul{
+    padding-bottom: 20px;
+
+  }
+  .footer_icons{
+    margin-left: -260px;
+    
+  }
+  .service_code{
+    margin-left: -260px;
+  }
+  .copy-write{
+    margin-left: -260px;
   }
   
   .service_code, .copy-write {
